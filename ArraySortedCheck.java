@@ -2,6 +2,8 @@ public class ArraySortedCheck{
 
 
 /*
+ * 
+ * Brute Force
  * TC : O(n^2)
  * 
  * SC : O(1)
@@ -24,6 +26,8 @@ public static boolean isSortedNaive(int [] arr){
 }
 
 /*
+ * 
+ * Efficient
  * TC = O(n)
  * 
  * SC = O(1)

@@ -26,7 +26,7 @@ public static void traverseArray(int[]arr){
 } 
 
 /*
- * 
+ * Brute Force
  * TC=O((N*M)*(N+M))+O(N*M)
  * 
  * SC=O(1)
@@ -84,7 +84,9 @@ public static void setZeroesN(int[][]arr){
 
 
 /*
- * TC=O(N*M)+O(N*M) = O(N*M)
+ *
+ *  Better
+ *  TC=O(N*M)+O(N*M) = O(N*M)
  * 
  * SC=O(N)
  * 
@@ -142,7 +144,7 @@ public static void setZeroesB(int[][]arr){
 
 
 /*
- * 
+ * Efficient
  * TC=O(N)+O(M)+(N*M)+O(N*M)+O(N)+O(M)= O(N)+O(M)+O(N*M) ~ O(N*M)
  * 
  * SC= O(1)
@@ -218,15 +220,6 @@ public static void setZeroesE(int[][]arr){
     System.out.println("Matrix after inserting zeroes");
     traverseMatrix(arr);
 }
-
-
-
-
-
-
-
-
-
 
 
 public static void main(String[] args) {
