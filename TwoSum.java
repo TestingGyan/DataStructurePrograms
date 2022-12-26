@@ -68,6 +68,7 @@ public class TwoSum {
 
     /*
      * TC = O(nlogn)+O(n)
+     * if sorted than TC = O(n)
      * 
      * SC=O(1)
      * 
@@ -76,6 +77,8 @@ public class TwoSum {
 
     public static int [] twoSumTwoPointer(int [] arr,int target){
 
+        //{1,2,5,4,3} target=8
+
         int [] res=new int[2];
 
         int n=arr.length;
@@ -83,7 +86,7 @@ public class TwoSum {
         int i=0;
         int j=n-1;
 
-        Arrays.sort(arr);
+        Arrays.sort(arr); //{1,2,3,4,5}
 
         while(i<=j){
 
