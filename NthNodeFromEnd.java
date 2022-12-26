@@ -15,22 +15,22 @@ public class NthNodeFromEnd extends BasicOperations {
         else{
             Node temp=head;
             int counter=0;
-            while(temp!=null){
+            while(temp!=null){ //finding length of list
                 temp=temp.next;
                 counter++;
 
             }
-            if(n>counter){
+            if(n>counter){  //making sure nth index is not bigger than length of list
                 return -1;
             }
-            int nthNode=counter-n;
+            int nthNode=counter-n; //finding nth node index from begining
 
             temp=head;
-            for(int i=0;i<nthNode;i++){
+            for(int i=0;i<nthNode;i++){ //traversing till nth node from begining of list
                 temp=temp.next;               
             }
 
-            return temp.data;
+            return temp.data; //returning data
         }
         
     }
@@ -51,12 +51,12 @@ public class NthNodeFromEnd extends BasicOperations {
             Node fast=head;
 
             for(int i=0;i<n;i++){
-                if(fast==null){
+                if(fast==null){ //making sure nth node index exist in list or not bigger than list
                     return -1;
                 }
                 fast=fast.next;
             }
-            while(fast!=null){
+            while(fast!=null){ //with this loop when fast reaches null, slow reaches nth node
                 slow=slow.next;
                 fast=fast.next;
             }

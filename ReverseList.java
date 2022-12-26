@@ -17,14 +17,14 @@ public class ReverseList extends BasicOperations{
         Node temp=head;
         ArrayList<Integer> al= new ArrayList<>();
 
-        while(temp!=null){
+        while(temp!=null){ //storing list elements in arraylist
             al.add(temp.data);
             temp=temp.next;
         }
 
         temp=head;
-        while(temp!=null){
-            temp.data=al.remove(al.size()-1);
+        while(temp!=null){//traversing through list and changing data of nodes
+            temp.data=al.remove(al.size()-1); //getting and removing last ele from array list & storing in current node
             temp=temp.next;
         }
 
@@ -43,18 +43,19 @@ public class ReverseList extends BasicOperations{
             return null;
         }
 
-      Node prev=null;
+        //intializing prev & curr pointer 
+      Node prev=null; 
       Node curr=head;
 
       while(curr!=null){
-        Node next=curr.next;
-        curr.next=prev;
-        prev=curr;
-        curr=next;
+        Node next=curr.next; //taking hold of next link 
+        curr.next=prev; //breaking and reversing link
+        prev=curr; //changing prev pointer
+        curr=next; //changing curr pointer
 
       }
 
-      return prev;
+      return prev; //returning ne head
         
     }
 

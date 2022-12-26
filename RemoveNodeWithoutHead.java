@@ -2,7 +2,7 @@ public class RemoveNodeWithoutHead extends BasicOperations{
     
     public static Node remove(Node head,Node n){
         if(n.next==null){
-            return null;
+            return head;
         }
         Node next=n.next;
         n.data=next.data;
