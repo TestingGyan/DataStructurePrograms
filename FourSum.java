@@ -55,7 +55,7 @@ public class FourSum {
                 }
 
                 while(j+1<n && arr[j]==arr[j+1])++j; //ensuring to skip duplicates of second ele in quad
-                //here j+1 ensure to rech last dupliacte as j will also be incremented in for loop
+                //here j+1 ensure to reach last dupliacte as j will also be incremented in for loop
                 
             }
 
