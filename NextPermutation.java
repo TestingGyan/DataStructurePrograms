@@ -11,15 +11,15 @@ public class NextPermutation {
         if(arr==null || arr.length<=1){
             return;
         }
-        int i=n-2;
-        while(i>=0&&arr[i]>=arr[i+1])i--;
-        if(i>=0){
+        int i=n-2; // to start from the second last ele
+        while(i>=0&&arr[i]>=arr[i+1])i--;  // finding the break point i.e is ele which smaller than its next ele
+        if(i>=0){ //ensuring ele exist in array
             int j=n-1;
-            while(arr[j]<=arr[i])j--;
+            while(arr[j]<=arr[i])j--;  // finding the next bigger element than arr[i] and than swapping once found
             swap(arr,i,j);
             
         }
-        reverse(arr, i+1, n-1);
+        reverse(arr, i+1, n-1); // reversing all elements next to arr[i]
     }
 
     public static void swap(int [] arr,int i,int j){
