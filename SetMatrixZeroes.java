@@ -88,7 +88,7 @@ public static void setZeroesN(int[][]arr){
  *  Better
  *  TC=O(N*M)+O(N*M) = O(N*M)
  * 
- * SC=O(N)
+ * SC=O(N+M)
  * 
  * 
  */

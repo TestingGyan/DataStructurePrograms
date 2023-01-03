@@ -1,7 +1,8 @@
 public class MaxSumSubArray {
 
+    
     /*
-     * TC=O(n)
+     * TC=O(n^2)
      * SC=O(1)
      * 
      * 
@@ -20,6 +21,12 @@ public class MaxSumSubArray {
         return maxSum;
     }
 
+    /*
+     * TC=O(n)
+     * SC=O(1)
+     * 
+     * 
+     */
     public static int maxSumE(int [] arr){
         int n=arr.length;
 
