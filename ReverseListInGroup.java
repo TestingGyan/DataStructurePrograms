@@ -38,7 +38,7 @@ public class ReverseListInGroup extends BasicOperations {
         Node head = n1;
         traverse(head);
 
-        head = reverseList(head, 2);
+        head = reverseListRecursive(head, 2);
         traverse(head);
     }
 
