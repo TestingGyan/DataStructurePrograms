@@ -1,12 +1,12 @@
 public class ReverseListInGroup extends BasicOperations {
 
-    public static Node reverseList(Node head, int k) {
+    public static Node reverseListRecursive(Node head, int k) {
         Node p = null;
         Node c = head;
         Node next = null;
         int count = 0;
 
-        while (c != null && count < k) { // REversing list for first K nodes
+        while (c != null && count < k) { // Reversing list for first K nodes
             next = c.next;
             c.next = p;
             p = c;
@@ -15,7 +15,8 @@ public class ReverseListInGroup extends BasicOperations {
         }
 
         if (next != null) { // if next is not null
-            Node restHead = reverseList(next, k); // finding head for the next k nodes in list
+            Node restHead = reverseListRecursive(next, k); // finding head for the next k nodes in list //Recusrsive
+                                                           // call
             head.next = restHead; // now linked list headat first is now last node in the reversed list so forming
                                   // link with it to the next found head
         }
