@@ -18,7 +18,8 @@ public class MergeTwoSortedLists extends BasicOperations {
         Node s=null;//sort pointer
         Node newH=null;
         Node next=null;
-        if(p.data<q.data){
+
+        if(p.data<q.data){  //finding first node or new Head
             s=p;
             p=s.next;
             
@@ -29,11 +30,11 @@ public class MergeTwoSortedLists extends BasicOperations {
            
         }
        newH=s;
-        while(p!=null && q!=null){
+        while(p!=null && q!=null){ //Traversing through the lists and forming links base on data
             if(p.data<q.data){
-                s.next=p;
-                s=p;
-                p=s.next;
+                s.next=p; //forming link
+                s=p; //changing sort pointer for next traversal
+                p=s.next; //updating current node
             }
             else{
                 s.next=q;
