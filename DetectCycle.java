@@ -35,7 +35,7 @@ public class DetectCycle extends BasicOperations {
         Node slow = head;
         Node fast = head;
 
-        while (fast.next != null && fast.next.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) { // if loop exists than at some point slow and fast pointers will meet
@@ -55,9 +55,13 @@ public class DetectCycle extends BasicOperations {
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-        n4.next = n2;
+        // n4.next = n2;
 
         Node head = n1;
+
+        System.out.println(detectB(head));
+
+        System.out.println(detectE(head));
 
     }
 }
