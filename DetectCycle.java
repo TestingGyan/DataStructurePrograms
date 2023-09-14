@@ -13,13 +13,13 @@ public class DetectCycle extends BasicOperations {
     public static boolean detectB(Node head) {
 
         Node temp = head;
-        HashSet<Node> set = new HashSet<>();
+        HashSet<Node> set = new HashSet<>(); // as set can have only unique values
 
         while (temp != null) {
-            if (set.contains(temp)) {
+            if (set.contains(temp)) { // if node is already present than it means cycle exist
                 return true;
             }
-            set.add(temp);
+            set.add(temp); // storing nodes in set
             temp = temp.next;
         }
         return false;
@@ -35,10 +35,10 @@ public class DetectCycle extends BasicOperations {
         Node slow = head;
         Node fast = head;
 
-        while (fast.next != null && fast.next.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast) {
+            if (slow == fast) { // if loop exists than at some point slow and fast pointers will meet
                 return true;
             }
         }
@@ -55,13 +55,13 @@ public class DetectCycle extends BasicOperations {
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-        n4.next = n2;
+        // n4.next = n2;
 
         Node head = n1;
 
-        detectB(head);
+        System.out.println(detectB(head));
 
-        detectE(head);
+        System.out.println(detectE(head));
 
     }
 }
