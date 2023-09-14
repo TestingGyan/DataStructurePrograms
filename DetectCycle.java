@@ -1,5 +1,4 @@
 import java.util.HashSet;
-import java.util.Hashtable;
 
 public class DetectCycle extends BasicOperations {
 
@@ -59,6 +58,10 @@ public class DetectCycle extends BasicOperations {
         n4.next = n2;
 
         Node head = n1;
+
+        detectB(head);
+
+        detectE(head);
 
     }
 }
